@@ -1,21 +1,14 @@
 - defaults:
     link:
       relink: true
+      force: true
 
 - clean: ['~']
 
 - link:
-    ~/.zshrc:
-      relink: true
-      path: zshrc
-      force: true
-    ~/.vimrc:
-      relink: true
-      path: vimrc
-    ~/.oh-my-zsh/custom/themes/bullet-train.zsh:
-      relink: true
-      path: oh-my-zsh/themes/bullet-train
-      force: true
+    ~/.zshrc: zshrc
+    ~/.vimrc: vimrc
+    ~/.oh-my-zsh/custom/themes/bullet-train.zsh: oh-my-zsh/themes/bullet-train
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
